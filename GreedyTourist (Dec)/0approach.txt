@@ -1,0 +1,18 @@
+#My approach to this problem:
+Iteration, until the road map is a tree(graph).
+In each step, I add the min costed road, if it causes loop, then I remove it!
+
+#Loop Detection:
+To detect loop, I used a simple idea(which took 2-3 hours to implement!):
+	if there is a connected (همبند) graph, then we have a loop if and only if q>=p;
+		to do this, I had to first find the partitions of the given graph(graph=the road map up to this moment)
+		then, seeing if any of those partitions has a loop(in fact, with this iteration, only 1 of them could have a loop)
+
+finding the partitions seems easy to a human being, since we see the map, but to implement THIS, I used a n-sized array (!).
+	reading from the adjacency matrix, and deciding if the k-th Vertex is connected to any of the others; if it is connected add it to its group of vertexes
+		doing this with a n-sized array: I coined a term: top vertex. (which is not TOP necessarily); it's the top vertex yet; top how? a Vertex which is the starting point of adjacency check is called top! so simple!
+			the top Vertex changes during the process of partition-detection.
+
+[since it's hard to explain by text, If you want to understand the Program I wrote, I'll explain it orally]
+
+VR

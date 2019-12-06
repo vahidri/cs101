@@ -1,0 +1,5 @@
+This is simpler!
+In every step If the two vertexes which are going to be connected, belong to the same partition (i.e. they are already connected, thru other vertices), then that'd make a loop; so we won't pick that road!
+
+-- 
+VR
